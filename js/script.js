@@ -32,6 +32,12 @@ function smoothScroll() {
 // ON READY FUNCTION
 $(function () {
 
+  // Lightbox Options
+  lightbox.option({
+    'resizeDuration': 100,
+    'maxWidth': 600
+  })
+
   smoothScroll()
   fadeInSlow('nav');
 
@@ -48,4 +54,5 @@ $(function () {
     event.preventDefault();
     console.warn("Data sent!");
   })
+
 });

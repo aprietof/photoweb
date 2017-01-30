@@ -158,10 +158,33 @@ a.mobile span {
   width: 25%;
   float: left;
   display: block;
+  position: relative;
 }
 
 .img-container:hover {
   background: #000;
+}
+
+.imgDescription {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+}
+
+a.imgDescription {
+  padding: 10px;
+  text-decoration: none;
+}
+
+.img-container:hover .imgDescription {
+  visibility: visible;
+  opacity: .9;
 }
 
 .resize_fit_center {
