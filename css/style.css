@@ -1,6 +1,9 @@
 /* colors
 
-white: #FFFFFF;
+white:  #FFFFFF;
+yellow: #FFFF00
+gray:   #ccc
+black:  #000
 
 
 -------------------------
@@ -17,6 +20,9 @@ white: #FFFFFF;
    box-sizing: border-box;
 }
 
+/* Avoid white-space between sections */
+* { margin: 0; padding: 0; }
+
 /* ************ BODY ************ */
 
 body {
@@ -31,8 +37,16 @@ nav {
   padding: 10px;
   height: 11%;
   z-index: 999;
-  background: yellow;
+  background: #FFFF00;
   width: 100%;
+  position: fixed;
+}
+
+.spacer {
+  clear: both;
+  padding: 10px;
+  width: 100%;
+  height: 11%;
 }
 
 .logo {
@@ -162,9 +176,110 @@ a.mobile span {
   opacity: 0.1;
 }
 
+/* ************ ABOUT ************ */
+
+#about {
+  background: #FFF;
+  clear: both;
+  text-align: center;
+  padding: 90px 30px ;
+  height: 260px;
+}
+
+#about .text {
+  font-family: 'Comfortaa', cursive;
+}
+
+#about p {
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: .1em;
+  color: #737373;
+  line-height: 30px;
+}
+
+/* ************ INFO ************ */
+
+#info {
+  min-height: 311px;
+  background: #000;
+  color: #FFF;
+}
+
+.pencil-container {
+  margin: auto;
+  width: 80%;
+}
+
+#info img {
+  padding-top: 40px;
+  width: 80%;
+}
+
+#info h2 {
+  text-align: center;
+  padding: 0 20px;
+}
+
+#info p {
+  text-align: center;
+  padding: 0 20px;
+}
+
+p.info-text {
+  margin-top: 20px;
+  font-weight: 100;
+  line-height: 1.5em;
+}
+
+/* ************ CONTACT ************ */
+
+#contact {
+  min-height: 561px;
+  position: absolute;
+  width: 100%;
+}
+
+#contact h1 {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.form-container {
+  width: 100%;
+}
+
+.form {
+  margin: 10px auto;
+  width: 70%;
+}
+
+.form label {
+  margin-bottom: 10px;
+}
+
+.form input {
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  border: 2px solid #000;
+  font-size: x-large;
+  padding: 5px;
+}
 
 
+.form input[type="submit"] {
+  width: 40%;
+  font-size: larger;
+  margin-left: 30%;
+  background: #000;
+  color: #FFF;
+}
 
+.required {
+  color: red;
+}
 
 /* MEDIA QUERIES */
 
@@ -200,6 +315,15 @@ a.mobile span {
 
   .img-container {
     width: 50%;
+  }
+
+  #about p {
+    font-size: small;
+  }
+
+  #info p {
+    margin-top: 20px;
+    font-size: 15px;
   }
 
 }

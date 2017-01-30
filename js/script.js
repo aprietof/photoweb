@@ -23,7 +23,7 @@ function smoothScroll() {
     $('a[href*="#"]').on('click', function(event) {
         event.preventDefault();
         $('html,body').animate({
-            scrollTop: $(this.hash).offset().top +1
+            scrollTop: $(this.hash).offset().top -68
         }, 300);
     });
 }
@@ -35,8 +35,6 @@ $(function () {
   smoothScroll()
   fadeInSlow('nav');
 
-  console.log(window.innerWidth);
-
   // Fade in each image in order
   $(".resize_fit_center").each(function(index) {
     fadeInSlow(this, 70*index);
@@ -45,5 +43,9 @@ $(function () {
   // Event listener to mobile menu button (bars)
   $('#mobile-button').on("click", showMobileMenu)
 
-
+  // Form submit
+  $('#submit').on('click', function(event) {
+    event.preventDefault();
+    console.warn("Data sent!");
+  })
 });
