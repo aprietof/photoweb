@@ -173,6 +173,7 @@ a.mobile span {
 
 .wrapper {
   float: left;
+  min-height: 640px;
 }
 
 .img-container {
