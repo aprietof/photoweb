@@ -1,4 +1,4 @@
-#PaperKeep
+#PhotoWeb
 
 Responsive landing page with dynamic content and modals. Built with HTML5, CSS3, Bootstrap 3.3.7 and jQuery 3.1.
 
