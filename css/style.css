@@ -5,7 +5,6 @@ yellow: #FFFF00
 gray:   #ccc
 black:  #000
 
-
 -------------------------
 * Author: Adrian Prieto *
 * Year: 2016            *
@@ -40,6 +39,18 @@ nav {
   background: #FFFF00;
   width: 100%;
   position: fixed;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.get-menu {
+  height: 24%;
+}
+
+.mobile-links {
+  display: none;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .spacer {
@@ -147,6 +158,16 @@ a.mobile span {
   font-weight: normal;
 }
 
+/* ************ WRAPPER CONTAINER ************ */
+
+.wrapper-container {
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.opacity {
+  opacity: 0.1;
+}
 
 /* ************ PORTFOLIO-IMAGES ************ */
 
@@ -184,7 +205,7 @@ a.imgDescription {
 
 .img-container:hover .imgDescription {
   visibility: visible;
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .resize_fit_center {
@@ -275,7 +296,7 @@ p.info-text {
 
 .form {
   margin: 10px auto;
-  width: 70%;
+  width: 50%;
 }
 
 .form label {
@@ -330,7 +351,6 @@ footer small {
 }
 
 
-
 /* MEDIA QUERIES */
 
 /* large Screen */
@@ -348,7 +368,12 @@ footer small {
   }
 
   .links .menu-mobile {
-    display: inline;
+    padding-top: 3px;
+    display: table-cell;
+  }
+
+  .links {
+    padding-right: 0;
   }
 }
 
@@ -374,6 +399,10 @@ footer small {
   #info p {
     margin-top: 20px;
     font-size: 15px;
+  }
+
+  .form {
+    width: 70%;
   }
 
 }

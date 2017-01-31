@@ -2,19 +2,27 @@ function fadeInSlow(selector, delay = 50) {
   $(selector).css({display:'none'}).delay(delay).fadeIn('slow');
 }
 
-
-
 function showMobileMenu(event) {
 
   event.preventDefault();
 
   var barsClass = "fa fa-bars fa-2x";
   var closeClass = "fa fa-times fa-2x";
-  var thisButton = $(this);
+  var menuButton = $('#mobile-button');
+  var navbar = $('nav');
+  var mobileLinks = $('.mobile-links');
+  var container = $('.wrapper-container');
 
-  thisButton.hasClass(barsClass) ?
-  thisButton.removeClass(barsClass).addClass(closeClass) :
-  thisButton.removeClass(closeClass).addClass(barsClass)
+  navbar.toggleClass('get-menu')
+  container.toggleClass('opacity')
+
+  // show mobile menu links
+  navbar.hasClass('get-menu') ? mobileLinks.delay(100).show(0) : mobileLinks.hide();
+
+  // toggle mobile icons
+  menuButton.hasClass(barsClass) ?
+  menuButton.removeClass(barsClass).addClass(closeClass) :
+  menuButton.removeClass(closeClass).addClass(barsClass)
 }
 
 
@@ -23,7 +31,7 @@ function smoothScroll() {
     $('a[href*="#"]').on('click', function(event) {
         event.preventDefault();
         $('html,body').animate({
-            scrollTop: $(this.hash).offset().top -68
+            scrollTop: $(this.hash).offset().top -67
         }, 300);
     });
 }
@@ -35,7 +43,7 @@ $(function () {
   // Lightbox Options
   lightbox.option({
     'resizeDuration': 100,
-    'maxWidth': 600
+    'maxWidth': 800
   })
 
   smoothScroll()
@@ -47,7 +55,7 @@ $(function () {
   });
 
   // Event listener to mobile menu button (bars)
-  $('#mobile-button').on("click", showMobileMenu)
+  $('.mobile').on("click", showMobileMenu)
 
   // Form submit
   $('#submit').on('click', function(event) {
