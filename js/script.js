@@ -1,7 +1,16 @@
+/* *************** FUNCTIONS ***************
+-------------------------------------------- */
+
+
+/* Fade In Slow Function
+-------------------------------------------- */
 function fadeInSlow(selector, delay = 50) {
-  $(selector).css({display:'none'}).delay(delay).fadeIn('slow');
+  $(selector).hide().delay(delay).fadeIn('slow');
 }
 
+
+/* Show Mobile Menu Function
+-------------------------------------------- */
 function showMobileMenu(event) {
 
   event.preventDefault();
@@ -12,7 +21,11 @@ function showMobileMenu(event) {
   var navbar = $('nav');
   var mobileLinks = $('.mobile-links');
   var container = $('.wrapper-container');
+  var mask = $('.mask');
+  var body = $('body');
 
+  body.toggleClass('has-active-menu')
+  mask.toggleClass('is-active ')
   navbar.toggleClass('get-menu')
   container.toggleClass('opacity')
 
@@ -26,7 +39,8 @@ function showMobileMenu(event) {
 }
 
 
-
+/* Smooth Scroll Function
+-------------------------------------------- */
 function smoothScroll() {
     $('a[href*="#"]').on('click', function(event) {
         event.preventDefault();
@@ -37,7 +51,16 @@ function smoothScroll() {
 }
 
 
-// ON READY FUNCTION
+/* Fade in each image in order
+-------------------------------------------- */
+$(".resize_fit_center").each(function(index) {
+  fadeInSlow(this, 30*index);
+});
+
+
+
+/* *********** ON READY FUNCTION ***********
+-------------------------------------------- */
 $(function () {
 
   // Lightbox Options
@@ -46,16 +69,17 @@ $(function () {
     'maxWidth': 800
   })
 
-  smoothScroll()
-  fadeInSlow('nav');
 
-  // Fade in each image in order
-  $(".resize_fit_center").each(function(index) {
-    fadeInSlow(this, 70*index);
-  });
+  // Add smooth scrolling to site
+  smoothScroll();
 
-  // Event listener to mobile menu button (bars)
+
+
+  // Event listener to mobile menu button (bars) and mask
   $('.mobile').on("click", showMobileMenu)
+  $('.mask').on("click", showMobileMenu)
+
+
 
   // Form submit
   $('#submit').on('click', function(event) {

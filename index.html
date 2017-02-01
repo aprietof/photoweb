@@ -1,11 +1,12 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" href="img/camera_logo.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.9.0/css/lightbox.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -32,7 +33,7 @@
         </div>
 
         <div class="menu-mobile">
-          <a href="/" class="mobile"><span>MENU</span> <i id="mobile-button" class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
+          <a href="" class="mobile"><span>MENU</span> <i id="mobile-button" class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
         </div><br/>
 
         <div class="mobile-links">
@@ -47,10 +48,11 @@
 
   </nav>
 
-
-
-
+  <!-- Spacer between fixed navbar and first section -->
   <div class="spacer"></div>
+
+  <!-- Mask -->
+  <div id="mask" class="mask"></div>
 
 
   <div class="wrapper-container">
@@ -60,118 +62,121 @@
 
       <div class="img-container">
         <a href="#">
-          <img class='resize_fit_center' src='img/anemone-1533515_1280.jpg'/>
+          <img class='resize_fit_center' src='img/anemone-1533515_1280-fastload.jpg'/>
         </a>
         <a href='img/anemone-1533515_1280.jpg' data-lightbox="Photobook" data-title="The Flower" class="imgDescription"><small>The Flower</small></a>
       </div>
 
       <div class="img-container">
         <a href='#'>
-          <img class='resize_fit_center' src='img/water.jpg'/>
+          <img class='resize_fit_center' src='img/water-fastload.jpg'/>
         </a>
         <a href='img/water.jpg' data-lightbox="Photobook" data-title="The Glass" class="imgDescription"><small>The Glass</small></a>
       </div>
 
       <div class="img-container">
         <a href='#'>
-          <img class='resize_fit_center' src='img/beard.jpg'/>
+          <img class='resize_fit_center' src='img/beard-fastload.jpg'/>
         </a>
         <a href='img/beard.jpg' data-lightbox="Photobook" data-title="Hello" class="imgDescription"><small>Hello!</small></a>
       </div>
 
       <div class="img-container">
         <a href='#'>
-          <img class='resize_fit_center' src='img/diver.jpg'/>
+          <img class='resize_fit_center' src='img/diver-fastload.jpg'/>
         </a>
         <a href='img/diver.jpg' data-lightbox="Photobook" data-title="The Diver" class="imgDescription"><small>The Diver</small></a>
       </div>
 
       <div class="img-container">
         <a href='#'>
-          <img class='resize_fit_center' src='img/boombox.jpg'/>
+          <img class='resize_fit_center' src='img/boombox-fastload.jpg'/>
         </a>
         <a href='img/boombox.jpg' data-lightbox="Photobook" data-title="The Boombox" class="imgDescription"><small>The Boombox</small></a>
       </div>
 
       <div class="img-container">
         <a href='#'>
-          <img class='resize_fit_center' src='img/eye.jpg'/>
+          <img class='resize_fit_center' src='img/eye-fastload.jpg'/>
         </a>
         <a href='img/eye.jpg' data-lightbox="Photobook" data-title="The Eye" class="imgDescription"><small>The Eye</small></a>
       </div>
 
       <div class="img-container">
         <a href='#'>
-          <img class='resize_fit_center' src='img/glasses.jpg'/>
+          <img class='resize_fit_center' src='img/glasses-fastload.jpg'/>
         </a>
         <a href='img/glasses.jpg' data-lightbox="Photobook" data-title="The Glasses" class="imgDescription"><small>The Glasses</small></a>
       </div>
 
       <div class="img-container">
         <a href='#'>
-          <img class='resize_fit_center' src='img/cans.jpg'/>
+          <img class='resize_fit_center' src='img/cans-fastload.jpg'/>
         </a>
         <a href='img/cans.jpg' data-lightbox="Photobook" data-title="The PadLock" class="imgDescription"><small>The PadLock</small></a>
       </div>
 
       <div class="img-container">
         <a href='#'>
-          <img class='resize_fit_center' src='img/old-camera.jpg'/>
+          <img class='resize_fit_center' src='img/old-camera-fastload.jpg'/>
         </a>
         <a href='img/old-camera.jpg' data-lightbox="Photobook" data-title="The Old Camera" class="imgDescription"><small>The Old Camera</small></a>
       </div>
 
       <div class="img-container">
         <a href='#'>
-          <img class='resize_fit_center' src='img/hands.jpg'/>
+          <img class='resize_fit_center' src='img/hands-fastload.jpg'/>
         </a>
         <a href='img/hands.jpg' data-lightbox="Photobook" data-title="The Hands" class="imgDescription"><small>The Hands</small></a>
       </div>
 
       <div class="img-container">
         <a href='#'>
-          <img class='resize_fit_center' src='img/chand.jpg'/>
+          <img class='resize_fit_center' src='img/chand-fastload.jpg'/>
         </a>
         <a href='img/chand.jpg' data-lightbox="Photobook" data-title="The Chandelier" class="imgDescription"><small>The Chandelier</small></a>
       </div>
 
       <div class="img-container">
         <a href='#'>
-          <img class='resize_fit_center' src='img/pencil.jpg'/>
+          <img class='resize_fit_center' src='img/pencil-fastload.jpg'/>
         </a>
         <a href='img/pencil.jpg' data-lightbox="Photobook" data-title="The Pencil" class="imgDescription"><small>The Pencil</small></a>
       </div>
 
       <div class="img-container">
         <a href='#'>
-          <img class='resize_fit_center' src='img/wall.jpg'/>
+          <img class='resize_fit_center' src='img/wall-fastload.jpg'/>
         </a>
         <a href='img/wall.jpg' data-lightbox="Photobook" data-title="The Wall" class="imgDescription"><small>The Wall</small></a>
       </div>
 
       <div class="img-container">
         <a href='#'>
-          <img class='resize_fit_center' src='img/sale.jpg'/>
+          <img class='resize_fit_center' src='img/sale-fastload.jpg'/>
         </a>
         <a href='img/sale.jpg' data-lightbox="Photobook" data-title="Sale" class="imgDescription"><small>Sale</small></a>
       </div>
 
       <div class="img-container">
         <a href='#'>
-          <img class='resize_fit_center' src='img/lens.jpg'/>
+          <img class='resize_fit_center' src='img/lens-fastload.jpg'/>
         </a>
         <a href='img/lens.jpg' data-lightbox="Photobook" data-title="The Lens" class="imgDescription"><small>The Lens</small></a>
       </div>
 
       <div class="img-container">
         <a href='#'>
-          <img class='resize_fit_center' src='img/dog.jpg'/>
+          <img class='resize_fit_center' src='img/dog-fastload.jpg'/>
         </a>
         <a href='img/dog.jpg' data-lightbox="Photobook" data-title="The Dog" class="imgDescription"><small>The Dog</small></a>
       </div>
 
-    </div>
+    </div><!-- END PORTFOLIO -->
 
+
+
+    <!-- ABOUT -->
     <section id="about">
 
       <div class="text">
@@ -182,7 +187,8 @@
 
       </div>
 
-    </section><!-- END PORTFOLIO -->
+    </section><!-- END ABOUT -->
+
 
 
 
@@ -197,6 +203,7 @@
       </div>
 
     </section><!-- END INFO -->
+
 
 
 
@@ -229,6 +236,7 @@
       </div>
 
     </section><!-- END CONTACT -->
+
 
 
     <!-- FOOTER -->

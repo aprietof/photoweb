@@ -22,6 +22,7 @@ black:  #000
 /* Avoid white-space between sections */
 * { margin: 0; padding: 0; }
 
+
 /* ************ BODY ************ */
 
 body {
@@ -30,11 +31,22 @@ body {
   padding: 0;
 }
 
+/**
+ * Body states.
+ *
+ * When a menu is active, we want to hide the overflows on the body to prevent
+ * awkward document scrolling.
+ */
+
+.has-active-menu {
+  overflow: hidden;
+}
+
 /* ************ NAV ************ */
 
 nav {
+  height: 67px;
   padding: 10px;
-  height: 11%;
   z-index: 999;
   background: #FFFF00;
   width: 100%;
@@ -57,11 +69,11 @@ nav {
   clear: both;
   padding: 10px;
   width: 100%;
-  height: 11%;
+  height: 67px;
 }
 
 .logo {
-  margin-top: 1px;
+  margin: auto;
   float: left;
   text-align: center;
   width: auto;
@@ -88,7 +100,7 @@ nav {
   text-align: right;
   float: right;
   width: auto;
-  margin: 5px;
+  margin-top: 3px;
   padding-right: 10px;
 }
 
@@ -97,6 +109,7 @@ nav {
   margin-right: 30px;
   position: relative;
   font-weight: 300;
+  cursor: pointer;
 }
 
 .links a.social {
@@ -142,6 +155,7 @@ nav {
 }
 
 #mobile-button {
+  cursor: pointer;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -158,22 +172,35 @@ a.mobile span {
   font-weight: normal;
 }
 
-/* ************ WRAPPER CONTAINER ************ */
+/**
+ * Mask component
+ */
 
-.wrapper-container {
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+.mask {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  background-color: #000;
+  opacity: 0;
+  transition: opacity 0.3s, width 0s 0.3s, height 0s 0.3s;
 }
 
-.opacity {
-  opacity: 0.1;
+.is-active {
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  transition: opacity 0.3s;
 }
 
 /* ************ PORTFOLIO-IMAGES ************ */
 
 .wrapper {
   float: left;
-  min-height: 640px;
+  min-height: 795px;
 }
 
 .img-container {
@@ -406,4 +433,44 @@ footer small {
     width: 70%;
   }
 
+}
+
+/* Portrait Phone and Landscape */
+@media screen and (max-width: 320px) {
+
+  .links a {
+    margin-right: 0;
+  }
+
+  #info p {
+    font-size: 13px;
+  }
+
+  #contact {
+    min-height: 0;
+  }
+
+  #contact h1 {
+    padding-bottom: 20px;
+  }
+
+  .form input {
+    height: 35px;
+  }
+
+  .form label {
+    font-size: smaller;
+  }
+
+  .form input[type="submit"] {
+    font-size: smaller;
+  }
+
+  footer small {
+    font-size: xx-small;
+  }
+
+  footer {
+    padding: 0;
+  }
 }
